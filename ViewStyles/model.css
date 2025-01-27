@@ -1,0 +1,208 @@
+.delete-button {
+  background-color: red;
+  color: white;
+  font-size: 12px;
+  padding: 5px 10px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Style for the container of all user reviews */
+.user-reviews {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  /* Add some spacing between review boxes */
+
+  max-height: 350px;
+  overflow: auto;
+}
+
+/* Style for an individual review box */
+.user-review-box {
+  border: 1px solid #ddd;
+  /* Add a border around each box */
+  padding: 20px;
+  width: calc(33.33% - 20px);
+  /* Set the width to 33.33% minus the gap */
+  box-sizing: border-box;
+  background-color: #fff;
+  /* Background color for the box */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  /* Add a subtle box shadow */
+}
+
+/* Style for the container of all user reviews */
+.reviews-container {
+  overflow-x: auto;
+  /* Enable horizontal scrolling */
+  white-space: nowrap;
+  /* Prevent reviews from wrapping to the next line */
+}
+
+/* Style for an individual review box */
+.user-review-box {
+  display: inline-block;
+  /* Display reviews in a row */
+  width: 300px;
+  /* Adjust the width of each review box as needed */
+
+  /* Add spacing between review boxes */
+  vertical-align: top;
+  /* Align reviews to the top */
+}
+
+/* Style for the stars */
+.stars {
+  color: #ffcc00;
+  /* Color for checked stars (gold/yellow) */
+  font-size: 20px;
+  /* Adjust the size of stars as needed */
+}
+
+/* Style for the user's username */
+.user-review p strong {
+  color: #333;
+  /* Color for the username text */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Style for the review text */
+.user-review p {
+  color: #555;
+  /* Color for the review text */
+  font-size: 14px;
+  line-height: 1.4;
+}
+
+/* Style for review photos (if any) */
+.review-photos img {
+  width: 47%;
+  vertical-align: top;
+  margin-top: 10px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+  max-height: 75px;
+  /* Add a subtle box shadow to photos */
+}
+
+/* Style the modal */
+.modal {
+  display: none;
+  /* Hidden by default */
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Black background with opacity */
+}
+
+/* Modal content */
+.modal-content {
+  background-color: #fff;
+  margin: 15% auto;
+  /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 70%;
+  /* Adjust the width as needed */
+  max-width: 600px;
+  /* Max width for responsiveness */
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Close button */
+.close {
+  color: #aaa;
+  align-self: flex-end;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.stars {
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  /* Adjust vertical alignment as needed */
+}
+
+.stars input[type="radio"] {
+  display: none;
+}
+
+.stars label {
+  font-size: 30px;
+  padding: 5px;
+  cursor: pointer;
+  margin-right: 5px;
+  /* Adjust the spacing between stars */
+}
+
+.stars label:before {
+  content: "\2605";
+  /* Unicode star character */
+  display: inline-block;
+  color: #ccc;
+  /* Default star color */
+}
+
+.stars input[type="radio"]:checked ~ label:before {
+  content: "\2605";
+  color: #ffd700;
+  /* Gold color for selected stars */
+  order: 1;
+  /* Reverse the order */
+}
+
+#preview-img{max-width: 100%;}
+#customerReviews {
+    width: 1000px;
+    max-width: 100%;
+}
+
+
+
+
+.stars_rev {
+    display: flex;
+    position: relative;
+    top: 5px;
+    flex-direction: row-reverse;
+    /* Adjust vertical alignment as needed */
+}
+
+
+.optional-text {
+  font-size: 100%;
+}
+
+@media (max-width: 576px) { /* Adjusted for phones with screen width up to 576px */
+  .optional-text {
+      font-size: 75%; /* Reduce font size on small screens */
+  }
+}
+
+

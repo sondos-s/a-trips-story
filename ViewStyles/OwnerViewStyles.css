@@ -1,0 +1,1072 @@
+/* HomeForOwner Style */
+.welcome-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin-top: 100px;
+    margin-bottom: 300px;
+    font-family: 'Bitter';
+}
+
+.ownerActionsContainer {
+    left: 100px;
+    right: 100px;
+    margin-top: 300px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.ownerActionsContainerTitle {
+    margin-top: 100px;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.ownerActionsContainer a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    border: 2px solid #a9809e;
+    width: 230px;
+    height: 120px;
+    padding: 20px 20px;
+    border-radius: 20px;
+    margin: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.ownerActionsContainer img {
+    width: 70px;
+    height: 70px;
+    padding: 10px;
+}
+
+.ownerActionsContainer span {
+    margin-top: 10px;
+}
+
+/* AddNewTrip - Styles */
+.addnewtriptitle {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="date"],
+input[type="time"],
+input[type="number"],
+textarea {
+    width: 300px;
+    height: 20px;
+    padding: 10px;
+    left: 100px;
+    margin-bottom: 10px;
+    border: 1.5px solid #a9809e;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+select {
+    width: 330px;
+    height: 40px;
+    padding: 10px;
+    left: 100px;
+    margin-bottom: 10px;
+    border: 1.5px solid #a9809e;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+    font-weight: 100px;
+}
+
+textarea {
+    height: 100px;
+    resize: vertical;
+}
+
+
+.button-container-updatetrip {
+    margin-top: 5px;
+    display: flex;
+    justify-content: space-between;
+    /* Space evenly between the buttons */
+}
+
+.addtripbutton {
+    position: relative;
+    height: 40px;
+    width: 200px;
+    background-color: #c7a6c2;
+    color: #2E2C2C;
+    border: none;
+    border-radius: 4px;
+    margin-right: 60px;
+    margin-left: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0 auto;
+}
+
+.addtripbutton::before,
+.addtripbutton::after {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: #a9809e;
+    transition: height 0.3s;
+}
+
+.addtripbutton::before {
+    top: 0;
+}
+
+.addtripbutton::after {
+    bottom: 0;
+}
+
+.addtripbutton:hover {
+    background-color: #a9809e;
+    color: #2E2C2C;
+    transform: translateY(-5px);
+}
+
+.addtripbutton:hover::before,
+.addtripbutton:hover::after {
+    height: 100%;
+}
+
+.addtripbutton i {
+    margin-right: 10px;
+}
+
+/* Cancel on UpdateTrip_FrontEnd */
+
+.canceladdtripbutton {
+    position: relative;
+    height: 40px;
+    width: 200px;
+    background-color: #c7a6c2;
+    color: #2E2C2C;
+    border: none;
+    border-radius: 4px;
+    margin-right: 60px;
+    margin-left: 60px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: background-color 0.3s, transform 0.3s;
+    font-family: 'Montserrat', Arial, sans-serif;
+    margin: 0 auto;
+}
+
+.canceladdtripbutton::before,
+.canceladdtripbutton::after {
+    position: absolute;
+    width: 100%;
+    height: 0;
+    background-color: #a9809e;
+    transition: height 0.3s;
+}
+
+.canceladdtripbutton::before {
+    top: 0;
+}
+
+.canceladdtripbutton::after {
+    bottom: 0;
+}
+
+.canceladdtripbutton:hover {
+    background-color: #a9809e;
+    color: #2E2C2C;
+    transform: translateY(-5px);
+}
+
+.canceladdtripbutton:hover::before,
+.canceladdtripbutton:hover::after {
+    height: 100%;
+}
+
+.canceladdtripbutton i {
+    margin-right: 10px;
+}
+
+
+
+.input-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.input-row label {
+    flex: 1;
+    padding-right: 50px;
+    text-align: left;
+}
+
+.input-row .input-with-currency {
+    display: flex;
+    align-items: center;
+}
+
+.input-row input,
+.input-row textarea {
+    flex: 2;
+}
+
+.error {
+    border-color: red;
+}
+
+.error::after {
+    content: " !";
+    color: red;
+    font-weight: bold;
+    position: relative;
+    left: -20px;
+}
+
+.allinputs {
+    margin-top: 500px;
+    border: 2.5px solid #a9809e;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+/* Trip Added Successfully - PopUp */
+.popup-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 400px;
+    text-align: center;
+    position: relative;
+}
+
+.popup-container.active {
+    display: flex;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #888;
+    font-size: 20px;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.popup-title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.popup-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 500px;
+    text-align: center;
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #9e9d9d;
+    font-size: 26px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.popup-close:hover {
+    color: #333;
+}
+
+.checkmark {
+    font-size: 48px;
+    color: #4a7d70;
+    margin-bottom: 15px;
+    border-radius: 50%;
+    border: 4px solid #4a7d70;
+    display: inline-block;
+    line-height: 1;
+    padding: 15px;
+}
+
+.popup-title {
+    margin: 0;
+    font-size: 16px;
+}
+
+.popup-text {
+    font-size: 14px;
+    color: #666;
+    margin: 10px 0;
+}
+
+.checkboxes label {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* All Trips Table View */
+.container {
+    display: flex;
+    flex-direction: column;
+    /* Stack the items vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    margin-top: auto;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.table-container {
+    padding: 20px;
+}
+
+.table-container td {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+}
+
+tr:nth-child(even) {
+    background-color: #ffffff;
+    /* Background color for even rows */
+}
+
+tr:nth-child(odd) {
+    background-color: #ffffff;
+    /* Background color for odd rows */
+}
+
+.table-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.editing {
+    background-color: #d6d6d6;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 8px;
+    border: 1px solid black;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+table,
+th,
+td {
+    border: 1px solid #ccc;
+}
+
+th {
+    background-color: #f0f0f0;
+}
+
+a {
+    margin-right: 10px;
+}
+
+.add-button {
+    position: absolute;
+    margin-top: 100px;
+    top: 20px;
+    right: 20px;
+}
+
+.add-button-link {
+    background-color: #a9809e;
+    color: white;
+    padding: 18px 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.add-button-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #805976;
+}
+
+.fa-plus {
+    align-items: center;
+    margin: 10px 10px;
+    font-size: 30px;
+}
+
+
+/* Delete and Edit Buttons */
+.fa-trash,
+.fa-pencil-square-o {
+    text-decoration: none;
+    color: #2E2C2C;
+    transition: color 0.3s;
+    text-align: center;
+    font-size: 36px;
+}
+
+.fa-trash:hover {
+    color: red;
+    cursor: pointer;
+}
+
+.fa-pencil-square-o:hover {
+    color: blue;
+    cursor: pointer;
+}
+
+.table-row:hover {
+    background-color: #f9f9e5;
+}
+
+/* For Home */
+
+.compactSidebar {
+    width: 220px;
+    background-color: #c7a6c2;
+    position: fixed;
+    top: 54px;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compactSidebar a {
+    text-decoration: none;
+    color: #2E2C2C;
+}
+
+.compactSidebar button {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: #2E2C2C;
+    border: none;
+    cursor: pointer;
+    width: 220px;
+    height: 30px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.compactSidebar button:hover {
+    background-color: #a9809e;
+    color: white;
+    transform: translateX(+8px);
+    text-decoration: none;
+}
+
+.compactSidebar a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+.popup-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    z-index: 9999;
+}
+
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+}
+
+.popup-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    text-decoration: none;
+    color: #333;
+}
+
+.instagram-icon-container {
+    display: inline-block;
+    background: #f09433;
+    background: -moz-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: -webkit-linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f09433', endColorstr='#bc1888', GradientType=1);
+    color: white;
+    padding: 20px 20px;
+    border-radius: 50%;
+    align-items: center;
+}
+
+.popup-content button {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: #2E2C2C;
+    width: 100px;
+    height: 30px;
+    background-color: #c7a6c2;
+    margin: 15px;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* PDF */
+
+.compactSidebarPDF {
+    width: 90px;
+    background-color: #c7a6c2;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compactSidebarPDF button {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: #2E2C2C;
+    border: none;
+    cursor: pointer;
+    width: 90px;
+    height: 45px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.compactSidebarPDF button:hover {
+    background-color: #a9809e;
+    color: white;
+    transform: translateX(-8px);
+    text-decoration: none;
+}
+
+/* Edit Contact Us */
+.compactSidebarEditContact {
+    width: 90px;
+    background-color: #c7a6c2;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compactSidebarEditContact button {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: #2E2C2C;
+    border: none;
+    cursor: pointer;
+    width: 90px;
+    height: 45px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.compactSidebarEditContact button:hover {
+    background-color: #a9809e;
+    color: white;
+    transform: translateX(-8px);
+    text-decoration: none;
+}
+
+/* Contact Us PopUp */
+#contactus-save-btn {
+    position: absolute;
+    align-items: center;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    color: white;
+    background-color: #65b468;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 140px;
+}
+
+#contactus-save-btn:hover {
+    background-color: #518b53;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#contactus-save-btn:hover::before,
+#contactus-save-btn:hover::after {
+    height: 100%;
+}
+
+
+/* FAQ - Content FrontEnd */
+.container-faq {
+    display: flex;
+    flex-direction: column;
+    /* Stack the items vertically */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    margin-top: auto;
+    font-size: 12px;
+    padding-bottom: 20px;
+}
+
+.table-container-faq {
+    padding: 20px;
+}
+
+.table-container-faq td {
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.2);
+    padding: 8px;
+}
+
+.table-wrapper-faq {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.add-button-faq {
+    position: absolute;
+    margin-top: 100px;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+}
+
+.add-button-faq-link {
+    background-color: #a9809e;
+    color: white;
+    padding: 18px 18px;
+    text-decoration: none;
+    border-radius: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s, box-shadow 0.2s;
+    cursor: pointer;
+}
+
+.add-button-faq-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    background-color: #805976;
+    cursor: pointer;
+}
+
+
+/* Edit Contact Us */
+.compactSidebarManageFAQ {
+    width: 110px;
+    background-color: #c7a6c2;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+}
+
+.compactSidebarManageFAQ button {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: #2E2C2C;
+    border: none;
+    cursor: pointer;
+    width: 110px;
+    height: 45px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.compactSidebarManageFAQ button:hover {
+    background-color: #a9809e;
+    color: white;
+    transform: translateX(-8px);
+    text-decoration: none;
+}
+
+.manage-a {
+    text-decoration: none;
+    color: #2E2C2C;
+}
+
+.manage-a:hover {
+    text-decoration: none;
+    color: white;
+}
+
+/* Progress Bar in Trip Bookings */
+#availability-progress {
+    width: 700px;
+    height: 12px;
+    background-color: #c7a6c2;
+    border-radius: 15px;
+}
+
+.progress-bar {
+    height: 100%;
+    transition: width 1s ease;
+    border-radius: 15px;
+    background-color: #8a6076;
+    position: relative;
+}
+
+.tooltip {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    bottom: calc(100% + 5px);
+    left: 50%;
+    transform: translateX(-50%);
+    width: max-content;
+}
+
+.progress-bar:hover .tooltip {
+    display: block;
+}
+
+.tooltip2 {
+    display: none;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    bottom: calc(100% + 5px);
+    margin-left: 400px;
+    width: max-content;
+}
+
+
+#availability-progress:hover .tooltip2 {
+    display: block;
+}
+
+.progressbar:hover .tooltip2 {
+    display: none;
+}
+
+/* Report Dashboard FrontEnd */
+.chart-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 600px;
+}
+
+.chart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(227, 226, 226, 0.799);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    width: 350px;
+}
+
+.chart-container canvas {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    max-height: 300px;
+}
+
+#tripDataChart {
+    max-width: 400px;
+}
+
+#tripDataChart {
+    max-width: 350px;
+}
+
+/* Center-align the header text */
+h3.dashboard-header {
+    text-align: center;
+    margin-top: 20px;
+    white-space: nowrap;
+    padding-left: 100px;
+}
+
+/* TripsBookingsManagement */
+
+.confirm-link {
+    color: green;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.confirm-link:hover {
+    text-decoration: underline;
+}
+
+.cancel-link {
+    color: red;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.cancel-link:hover {
+    text-decoration: underline;
+}
+
+
+/* Edit About Us */
+.compactSidebarEditAbout {
+    width: 140px;
+    background-color: #c7a6c2;
+    position: fixed;
+    top: 64px;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    text-decoration: none;
+    font-size: 16px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.compactSidebarEditAbout button {
+    font-family: 'Montserrat', Arial, sans-serif;
+    font-weight: bold;
+    background-color: transparent;
+    color: #2E2C2C;
+    border: none;
+    cursor: pointer;
+    width: 140px;
+    height: 45px;
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+.compactSidebarEditAbout button:hover {
+    background-color: #a9809e;
+    color: white;
+    transform: translateX(-8px);
+    text-decoration: none;
+}
+
+/* Contact Us PopUp */
+#aboutus-save-btn {
+    position: absolute;
+    align-items: center;
+    bottom: 10px;
+    right: 10px;
+    padding: 8px 16px;
+    color: white;
+    background-color: #65b468;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    width: 140px;
+}
+
+#aboutus-save-btn:hover {
+    background-color: #518b53;
+    color: white;
+    transform: translateY(-2px);
+}
+
+#aboutus-save-btn:hover::before,
+#aboutus-save-btn:hover::after {
+    height: 100%;
+}
+
+.scrollable-container {
+    max-height: 300px;
+    /* Adjust the maximum height as needed */
+    overflow-y: auto;
+}
+
+/* Speech Bubble Style */
+.speech-bubble {
+    display: none;
+    background-color: #f9f9f9;
+    color: #2E2C2C;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    z-index: 1;
+    width: 200px;
+    position: absolute;
+    transform: translateY(-50%);
+}
+
+.icon {
+    position: relative;
+    cursor: pointer;
+}
+
+.error-message {
+    color: red;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+}
+
+/* Loading Spinner */
+
+.spinner {
+    border: 4px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top: 4px solid #ac7b9f;
+    width: 40px;
+    height: 40px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg); }
+  }
+
+  #loading-container {
+    text-align: center;
+    position: relative;
+  }
+  
+  #loading-text {
+    margin-top: 10px;
+    color: #333;
+    font-weight: bold;
+  }
+  

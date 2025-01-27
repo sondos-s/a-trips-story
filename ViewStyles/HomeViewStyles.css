@@ -1,0 +1,356 @@
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 100px;
+  margin-bottom: 300px;
+  font-family: 'Bitter';
+}
+
+.actionsContainerTitle {
+  margin-top: 100px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 100px;
+}
+
+/* Categories */
+.tripCategoriesContainer {
+  margin-top: 300px;
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.tripCategoriesContainer a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: #2E2C2C;
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  width: 120px;
+  height: 80px;
+  border-radius: 100px;
+  background-color: #c7a6c2;
+  margin: 15px;
+  transition: background-color 0.3s, transform 0.3s;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tripCategoriesContainer a:hover {
+  background-color: #8a6076;
+  transform: translateY(-10px);
+  color: white;
+  box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+}
+
+.tripCategoriesContainer img {
+  width: 35px;
+  height: 35px;
+  padding: 10px;
+}
+
+.tripCategoriesContainerTitle {
+  text-align: center;
+  padding-top: 0px;
+  margin-bottom: 200px;
+}
+
+.tripCategoriesContainer a img {
+  display: block;
+  margin: 0 auto;
+}
+
+.tripCategoriesContainer a span {
+  display: block;
+  text-align: center;
+}
+
+.tripCategoriesContainer h2 {
+  font-size: 16px;
+  color: #2E2C2C;
+  margin-bottom: 20px;
+}
+
+/* Calendar */
+.calendar-container {
+  font-family: 'Montserrat', Arial, sans-serif;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  overflow: hidden;
+  width: 800px;
+  height: 452px;
+  margin: 0 auto;
+  font-size: 14px;
+  margin: 100px;
+  align-items: center;
+  justify-self: center;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #c7a6c2;
+  color: #2E2C2C;
+  padding: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  border-top: 1px solid #ccc;
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 60px;
+  border-right: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+}
+
+.day-number {
+  margin-top: 5px;
+  margin-left: 5px;
+  font-weight: bold;
+  margin-bottom: 2px;
+  padding-left: 2px;
+}
+
+.day.empty {
+  background-color: #f0f0f0;
+}
+
+.day-header {
+  font-weight: bold;
+  align-items: center;
+  height: 20px;
+}
+
+#prevBtn,
+#nextBtn {
+  color: #2E2C2C;
+  background-color: transparent;
+  border: 0px solid transparent;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.day .tripTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding-left: 3px;
+}
+
+.today-pin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding-left: 45px;
+}
+
+/* All Trips */
+.plannedtrips {
+  font-family: 'Montserrat', Arial, sans-serif;
+}
+
+.content-container {
+  display: flex;
+  padding-top: 20px;
+  align-content: center;
+}
+
+.content-container-past {
+  display: flex;
+  padding-top: 10px;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* Center horizontally */
+  justify-content: center;
+  /* Center vertically */
+  min-height: 100vh;
+}
+
+.page-container .planned-trips-heading {
+  text-align: left;
+}
+
+/* Welcome section */
+.welcome-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 100px;
+  margin-bottom: 300px;
+  font-family: 'Bitter';
+}
+
+.planned-section {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 3000px;
+  padding-top: 1000px;
+}
+
+.trip-card {
+  background-color: white;
+  border-radius: 10px;
+  padding: 20px 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 10px 10px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.trips-container {
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  padding-left: 85px;
+}
+
+.trips-list {
+  margin-right: 20px;
+}
+
+.content-container,
+.content-container-past {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-container-past {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-item-past {
+  background-color: white;
+  margin-right: 20px;
+  padding: 20px 20px;
+  border-radius: 10px;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: calc(20% - 20px);
+  margin-bottom: 20px;
+}
+
+.past-trip-row {
+  display: none;
+}
+
+.past-trip-row.active {
+  display: flex;
+}
+
+/* Instagram */
+.instagram-container {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 35px;
+  width: 100%;
+  align-items: center;
+}
+
+.instagram-post {
+  width: calc(33.33% - 10px);
+  height: 100px;
+}
+
+.instagram-header {
+  width: 1050px;
+  height: 79px;
+  font-family: 'Bitter';
+  font-style: normal;
+  font-weight: bold;
+  line-height: 70px;
+  color: black;
+  animation: wave 1s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  position: relative;
+}
+
+/* Close Button */
+.close-modal {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.form-group-link {
+  display: flex;
+  align-items: center;
+}
+
+.form-group-link label {
+  margin-right: 10px;
+  flex-shrink: 0;
+}
+
+.form-group-link i {
+  font-size: 30px;
+}
