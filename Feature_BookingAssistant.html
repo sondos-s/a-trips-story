@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">    
+    <link rel="stylesheet" href="ViewStyles/ViewStyles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--bootstrap
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+   -->
+    <!--icons-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=IM Fell French Canon SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IM Fell English' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=BIZ UDMincho' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css?family=IM Fell French Canon SC' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon+SC&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=IM+Fell+English&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=Jost&display=swap' rel='stylesheet'>
+    <link href='https://fonts.googleapis.com/css2?family=BIZ+UDMincho&display=swap' rel='stylesheet'>
+    <title>Booking Assistant</title>
+</head>
+<body>
+    <button class="open-button" onclick="openForm()"><img src="ViewStyles/BookingAssistant/bot.png" style="height: 50px; width: 50px;">Your Booking Assistant</button>
+    <div class="chat-popup" id="myForm" style="font-family: 'Courier New', Courier, monospace; border-radius: 10px; background-color: aliceblue;">
+        <div id="chatbot">
+            <div class="chat-header" style="height: 60px;">
+                <span class="online-circle"></span>
+                <i class="fa fa-commenting fa-2x circle-icon-bot" style="margin-left: 30px;"></i>
+                <span class="chat-header-name" style="font-size: 18px;">Your Booking Assistant<br>
+                <span class="online-text">Online</span>
+                </span>
+                <button type="button" class="closechat" onclick="closeForm()"><i class="fa fa-times fa-2x"></i></button>
+            </div>
+            
+            <div id="conversation">
+                <div class="navigation"></div>
+              <div class="chatbot-message">
+                <p class="chatbot-text">Hi! 👋 it's great to see you, I'm Your Booking Assistant! Let me know what information you're looking for.</p>
+              </div>
+            </div>
+            <form id="input-form">
+                <message-container>
+                  <div id="message-options">
+                    <button class="my-button" type="button" onclick="sendMessage('📝 About signing up')">📝 About signing up</button>
+                    <button class="my-button" type="button" onclick="sendMessage('📥 About booking')">📥 About booking</button>
+                    <button class="my-button" type="button" onclick="sendMessage('💳 About payment')">💳 About payment</button>
+                  </div>
+                  <p style="font-size: 12px; color: rgb(74, 74, 74);">Select any of the buttons above</p>
+                </message-container>
+              </form>
+      </form>
+    </div>
+    
+    <script>
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+    }
+    
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+    }
+    </script>
+</body>
+</html>
+<script style="font-family: 'Courier New', Courier, monospace;">
+    var predefinedMessages = [
+        {
+            message: "📝 About signing up",
+            response: "What information do you want about signing up?",
+            options: ["How can I sign up for an account?", "Why is it necessary to sign up?","Can I book a trip without signing up?", "👈 Go to menu"]
+        },
+        {
+            message: "How can I sign up for an account?",
+            response: "To sign up for an account, you can click on the Sign up button, fill in the required fields with your information, and then click on the Sign up button. After that, you'll be ready to book a trip!",
+            options: ["Why is it necessary to sign up?", "Can I book a trip without signing up?", "👈 Go to menu"]
+        },
+        {
+            message: "Why is it necessary to sign up?",
+            response: "Signing up is necessary to be able to book a trip or add desired trips to your wishlist.",
+            options: ["How can I sign up for an account?", "Can I book a trip without signing up?", "👈 Go to menu"]
+        },
+        {
+            message: "Can I book a trip without signing up?",
+            response: "Unfortunately, no. You cannot book a trip without signing up. However, you can still view the trips and their details.",
+            options: ["How can I sign up for an account?", "Why is it necessary to sign up?","👈 Go to menu"]
+        },
+        // go back to menu
+        {
+            message: "👈 Go to menu",
+            response: "Let me know what information you're looking for.",
+            options: ["📝 About signing up", "📥 About booking", "💳 About payment"]
+        },
+        // about booking
+        {
+            message: "📥 About booking",
+            response: "What information do you want about booking trips?",
+            options: ["How can I book a trip?","Can I book a trip for multiple people?", "👈 Go to menu"]
+        },
+        {
+            message: "How can I book a trip?",
+            response: "To book a trip, you need to sign in, go to Our Planned Trips, choose a trip, view its details, and click on the Book This Trip button.",
+            options: ["Can I book a trip for multiple people?","👈 Go to menu"]
+        },
+        {
+            message: "Can I book a trip for multiple people?",
+            response: "Yes! You can book a trip for multiple people by adding the number of participants you want to book for on the booking screen.",
+            options: ["How can I book a trip?","👈 Go to menu"]
+        },
+        // about payment
+        {
+            message: "💳 About payment",
+            response: "What information do you want about payment?",
+            options: ["What are the available payment methods?","What is included in the price?", "👈 Go to menu"]
+        },
+        {
+            message: "What are the available payment methods?",
+            response: "You can pay Cash or Bit.",
+            options: ["What is included in the price?", "👈 Go to menu"]
+        },
+        {
+            message: "What is included in the price?",
+            response: "The price of the trip typically includes bus travel, which depends on the chosen route. However, some sites may require additional entrance fees in addition to the bus trip cost.",
+            options: ["What are the available payment methods?","👈 Go to menu"]
+        }
+    ];
+
+    function scrollToBottom() {
+        var conversation = document.getElementById("conversation");
+        conversation.scrollTop = conversation.scrollHeight;
+    }
+    function sendMessage(message) {
+        // Display user message in the conversation
+        var userMessageElement = document.createElement("div");
+        userMessageElement.classList.add("user-message");
+        userMessageElement.innerHTML = "<p class='user-text'>" + message + "</p>";
+        document.getElementById("conversation").appendChild(userMessageElement);
+
+        scrollToBottom(); // Scroll to the bottom after displaying the response
+
+        // Display "typing" indicator
+        var typingIndicatorElement = document.createElement("div");
+        typingIndicatorElement.classList.add("chatbot-message");
+        typingIndicatorElement.innerHTML = "<p class='chatbot-text'>Typing...</p>";
+        document.getElementById("conversation").appendChild(typingIndicatorElement);
+
+        scrollToBottom(); // Scroll to the bottom after displaying the response
+
+        // Simulate typing delay
+        setTimeout(function () {
+            // Remove "typing" indicator
+            document.getElementById("conversation").removeChild(typingIndicatorElement);
+
+            // Check if the user message matches any predefined message
+            for (var i = 0; i < predefinedMessages.length; i++) {
+                if (message.toLowerCase() === predefinedMessages[i].message.toLowerCase()) {
+                    // Display corresponding response in the conversation
+                    var chatbotMessageElement = document.createElement("div");
+                    chatbotMessageElement.classList.add("chatbot-message");
+                    chatbotMessageElement.innerHTML = "<p class='chatbot-text'>" + predefinedMessages[i].response + "</p>";
+                    document.getElementById("conversation").appendChild(chatbotMessageElement);
+
+                    // Check if options exist for the selected message
+                    if (predefinedMessages[i].options && predefinedMessages[i].options.length > 0) {
+                        displayOptions(predefinedMessages[i].options); // Display the new options
+                    } else {
+                        removeOptions(); // Remove existing options if no options are available
+                    }
+
+                    scrollToBottom(); // Scroll to the bottom after displaying the response
+                    return; // Exit the function after sending the response
+                }
+            }
+
+            // If no predefined message match, display a default response
+            var defaultResponse = "I'm sorry, I didn't understand that. How can I assist you?";
+            var defaultResponseElement = document.createElement("div");
+            defaultResponseElement.classList.add("chatbot-message");
+            defaultResponseElement.innerHTML = "<p class='chatbot-text'>" + defaultResponse + "</p>";
+            document.getElementById("conversation").appendChild(defaultResponseElement);
+
+            removeOptions(); // Remove existing options
+            scrollToBottom(); // Scroll to the bottom after displaying the response
+        }, 1100);
+    }
+ // Function to display new options
+    function displayOptions(options) {
+        // Clear existing options if any
+        var optionsContainer = document.getElementById("message-options");
+        optionsContainer.innerHTML = "";
+
+    // Create and append buttons for each option
+    for (var i = 0; i < options.length; i++) {
+        var optionButton = document.createElement("button");
+        optionButton.type = "button";
+        optionButton.classList.add("my-button"); // Add the "my-button" class
+        optionButton.textContent = options[i];
+        optionButton.addEventListener("click", function() {
+            sendMessage(this.textContent); // Send the selected option as a new message
+        });
+
+        optionsContainer.appendChild(optionButton);
+        optionsContainer.appendChild(document.createElement("br"));
+  }
+  scrollToBottom(); // Scroll to the bottom after displaying the response
+    }
+    
+
+</script>
